@@ -206,12 +206,29 @@ img { display: block; max-width: 100%; height: auto; }
 
 .hero__title {
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 7.5vw, 4.8rem);
+  font-size: clamp(2rem, 6vw, 3.8rem);
   font-weight: 300;
   letter-spacing: 0.06em;
   line-height: 1;
   color: #fff;
-  text-transform: none;
+  text-align: center;
+}
+
+.hero__title .name {
+  display: block;
+  line-height: 1;
+}
+
+.hero__title .amp {
+  display: block;
+  font-size: 0.6em;
+  opacity: 0.85;
+  line-height: 1;
+  margin: 0.08em 0;
+}
+
+.hero__title .name--last {
+  margin-top: -0.1em;
 }
 
 .hero__name {
