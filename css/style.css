@@ -206,7 +206,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .hero__title {
   font-family: var(--font-serif);
-  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-size: clamp(3rem, 9vw, 5.5rem);
   font-weight: 300;
   letter-spacing: 0.06em;
   line-height: 1;
