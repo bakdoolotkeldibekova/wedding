@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Кыз узатуу — Айпери. 04.10.2026, Боз үй ресторан, Чолпон-Ата.">
+  <title>Кыз узатуу — Айпери</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Ballet&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Marck+Script&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preload" href="images/pages/after-address-2.jpg?v=5" as="image">
+  <link rel="stylesheet" href="css/style.css?v=46">
+</head>
+<body>
+
+  <audio id="bg-music" loop autoplay preload="metadata" playsinline webkit-playsinline x-webkit-airplay="allow">
+    <source src="audio/music.mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    (function () {
+      var audio = document.getElementById('bg-music');
+      if (!audio) return;
+      audio.volume = 1;
+      function play() {
+        audio.muted = false;
+        return audio.play().catch(function () {});
+      }
+      play();
+      audio.addEventListener('loadeddata', play, { once: true });
+      audio.addEventListener('canplaythrough', play, { once: true });
+    })();
+  </script>
+
+  <div id="music-unlock" class="music-unlock hidden" aria-hidden="true"></div>
+
+  <button id="music-toggle" class="music-btn" type="button" aria-label="Музыканы күйгүзүү">
+    <svg class="music-btn__icon music-btn__icon--off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+      <line x1="1" y1="1" x2="23" y2="23"/>
+    </svg>
+    <svg class="music-btn__icon music-btn__icon--on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+    </svg>
+  </button>
+
+  <main id="main-content" class="main">
+
+    <section class="hero" aria-label="Негизги сүрөт">
+      <div class="hero__media">
+        <div class="hero__slides" id="hero-slides"></div>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__panel">
+        <div class="hero__content">
+          <!-- <p class="closing__title" style="color: #C9A962;">Чакыруу</p> -->
+<!--          <p class="hero__name">Азамат & Айпери</p>-->
+          <h2 class="hero__title">Азамат & Айпери</h2>
+          <div class="hero__divider" aria-hidden="true">
+            <span class="hero__divider-line"></span>
+            <span class="hero__divider-diamond"></span>
+            <span class="hero__divider-line"></span>
+          </div>
+          <p class="hero__date">11.10.2026</p>
+          <p style="margin-top: 5px;" class="hero__date">16:00</p>
+        </div>
+      </div>
+      <button class="hero__scroll" type="button" aria-label="Төмөн жылдыруу">
+        <svg class="hero__scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14"/>
+          <path d="m6 13 6 6 6-6"/>
+        </svg>
+      </button>
+    </section>
+
+    <section id="invitation" class="invitation section">
+      <div class="container">
+        <div class="invitation__card reveal">
+          <h3 class="closing__title2">Кадырлуу конокторубуз!</h3>
+
+          <div class="invitation__photo-wrap">
+            <img class="invitation__photo" src="images/pages/page2.webp?v=2" alt="Айпери" loading="lazy" decoding="async">
+          </div>
+
+<!--          Жашоонун жаңы барагын ачып, ак ниет менен баш кошуп жаткан сүйүктүү балдарыбыз Азамат менен Айперинин үйлөнүү той салтанатына ардактуу коногубуз болуп кетиңиздер.Бул кубанычтуу күнү биздин төрүбүздөн орун алып, жаш жубайларга ак батаңыздарды берип, кубанычыбызды тең бөлүшүүңүздөрдү каалайбыз!-->
+          <p class="invitation__lead">Жашоонун жаңы барагын ачып, ак ниет менен баш кошуп жаткан сүйүктүү балдарыбыз</p>
+          <p class="invitation__name">Азамат менен Айперинин</p>
+          <p class="invitation__lead invitation__lead--after">үйлөнүү той салтанатына чакырабыз!</p>
+          <p class="invitation__text">
+            Бул кубанычтуу күнү төрүбүздөн орун&nbsp;алып, ак батаңыздарды берип кетиңиздер!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown section">
+      <div class="container">
+        <h3 class="closing__title2">Тойго калган убакыт: </h3>
+        <div class="countdown__grid reveal">
+          <div class="countdown__item">
+            <span id="cd-days" class="countdown__num">00</span>
+            <span class="countdown__label">Күн</span>
+          </div>
+          <div class="countdown__sep">:</div>
+          <div class="countdown__item">
+            <span id="cd-hours" class="countdown__num">00</span>
+            <span class="countdown__label">Саат</span>
+          </div>
+          <div class="countdown__sep">:</div>
+          <div class="countdown__item">
+            <span id="cd-mins" class="countdown__num">00</span>
+            <span class="countdown__label">Мүн</span>
+          </div>
+          <div class="countdown__sep">:</div>
+          <div class="countdown__item">
+            <span id="cd-secs" class="countdown__num">00</span>
+            <span class="countdown__label">Сек</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portrait section">
+      <div class="container">
+        <div class="portrait__wrap reveal">
+          <img class="portrait__photo" src="images/pages/before-address.webp?v=2" alt="Айпери" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section class="venue section">
+      <div class="container">
+        <div class="program__venue reveal">
+          <p style="margin-top: 50px;" class="closing__title2">Дарегибиз: </p>
+          <div class="venue__yurt reveal">
+            <img class="venue__yurt-img" src="images/venue/boz-ui.jpg?v=2" alt="«Боз үй» рестораны">
+          </div>
+          <p class="program__venue-place">«АЛА-ТОО» РЕСТОРАНЫ</p>
+          <p class="program__venue-place_2">Каракол шаары</p>
+          <a class="program__venue-link" href="https://go.2gis.com/h71T0" target="_blank" rel="noopener">Картада көрүү</a>
+        </div>
+      </div>
+    </section>
+
+   
+
+    <section style="margin-top: 50px;" class="feature-photo section">
+      <div class="container">
+        <div class="feature-photo__frame reveal">
+          <img class="feature-photo__img" src="images/pages/after-address-2.jpg?v=2" alt="Айпери" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <section style="margin-top: 30px;" class="calendar section">
+      <div class="container reveal">
+        <p class="closing__title">Октябрь</p>
+        <div class="calendar__grid">
+          <span class="calendar__day-name">Дш</span>
+          <span class="calendar__day-name">Ше</span>
+          <span class="calendar__day-name">Ша</span>
+          <span class="calendar__day-name">Бш</span>
+          <span class="calendar__day-name">Жм</span>
+          <span class="calendar__day-name">Иш</span>
+          <span class="calendar__day-name">Жк</span>
+          <span class="calendar__day calendar__day--empty"></span>
+          <span class="calendar__day calendar__day--empty"></span>
+          <span class="calendar__day calendar__day--empty"></span>
+          <span class="calendar__day">1</span>
+          <span class="calendar__day">2</span>
+          <span class="calendar__day">3</span>
+          <span class="calendar__day">4</span>
+          <span class="calendar__day">5</span>
+          <span class="calendar__day">6</span>
+          <span class="calendar__day">7</span>
+          <span class="calendar__day">8</span>
+          <span class="calendar__day">9</span>
+          <span class="calendar__day">10</span>
+          <span class="calendar__day calendar__day--event">11</span>
+          <span class="calendar__day">12</span>
+          <span class="calendar__day">13</span>
+          <span class="calendar__day">14</span>
+          <span class="calendar__day">15</span>
+          <span class="calendar__day">16</span>
+          <span class="calendar__day">17</span>
+          <span class="calendar__day">18</span>
+          <span class="calendar__day">19</span>
+          <span class="calendar__day">20</span>
+          <span class="calendar__day">21</span>
+          <span class="calendar__day">22</span>
+          <span class="calendar__day">23</span>
+          <span class="calendar__day">24</span>
+          <span class="calendar__day">25</span>
+          <span class="calendar__day">26</span>
+          <span class="calendar__day">27</span>
+          <span class="calendar__day">28</span>
+          <span class="calendar__day">29</span>
+          <span class="calendar__day">30</span>
+          <span class="calendar__day">31</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing section">
+      <div class="container">
+        <div class="closing__inner reveal">
+          <div class="ornament-line">✦ ✦ ✦</div>
+          <h3 class="closing__title">Урматтоо менен той ээлери:</h3>
+          <p class="closing__names">Базарбай · Батыйкуль</p>
+          <p class="closing__date">11.10.2026 · 16:00 · Ала-Тоо</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js?v=15"></script>
+</body>
+</html>
