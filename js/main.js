@@ -1,17 +1,13 @@
 (function () {
   'use strict';
 
-  const EVENT_DATE = new Date('2026-10-04T16:00:00+06:00');
+  const EVENT_DATE = new Date('2026-10-11T16:00:00+06:00');
 
   const HERO_PHOTOS = [
     'images/hero/1.jpeg?v=5',
     'images/hero/2.jpeg?v=5',
     'images/hero/3.jpeg?v=5',
-    'images/hero/4.jpeg?v=5',
-    'images/hero/5.jpeg?v=6',
-    'images/hero/6.jpeg?v=6',
-    'images/hero/7.jpeg?v=6',
-    'images/hero/8.jpeg?v=6'
+    'images/hero/4.jpeg?v=5'
   ];
 
   const musicToggle = document.getElementById('music-toggle');
