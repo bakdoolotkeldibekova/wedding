@@ -205,7 +205,7 @@ img { display: block; max-width: 100%; height: auto; }
 }
 
 .hero__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-serif), serif;
   font-size: clamp(3rem, 9vw, 5.5rem);
   font-weight: 300;
   letter-spacing: 0.06em;
@@ -229,6 +229,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .hero__title .name--last {
   margin-top: -0.1em;
+  font-size: clamp(2.6rem, 8vw, 5rem);
 }
 
 .hero__name {
